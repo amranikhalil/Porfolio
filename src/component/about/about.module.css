@@ -1,0 +1,140 @@
+.container{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    padding: 20px 20px;
+    color: #121e27;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    min-height: 600px;  
+}
+.typed-cursor{
+  opacity: 0;
+}
+.title{
+    font-size: 2.25rem;
+    font-weight: 900;
+    letter-spacing: 1.75px;
+    align-self: flex-start;
+    border-bottom: 10px solid rgb(238, 98, 11);
+}
+.leftContainer{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  gap: 40px;
+}
+
+.aboutImage{
+    width: 288px;
+    height: 350px;
+    border-radius: 20px;
+}
+.nepo{
+ font-size: 1.3rem;
+ font-weight: 300;
+ padding: 10px;
+ hyphens: auto;
+
+    
+}
+.content{
+  margin-top: 100px;
+  margin-right: 100px;
+  
+
+}
+.aboutItems{
+    max-width: 600px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+} 
+.aboutItems li{
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+.aboutItem:hover{
+    background-size: 100% 100%;
+}
+
+.aboutItemText{
+    display: flex;
+}
+@media screen and (max-width:830px) {
+  .container{
+    flex-direction: column;
+  }
+  .content{
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+}
+.cloudContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* z-index: 4; */
+}
+
+.cloud1,
+.cloud2,
+.cloud3 {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-image: url('../../../assets/about/cloud.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+.cloud1 {
+  top: 20%;
+  left: 0;
+}
+
+.cloud2 {
+  top: 30%;
+  right: 0;
+}
+
+.cloud3 {
+  top: 70%;
+  left: 0;
+}
+.icon{
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+.icon:hover{
+  transform: scale(1.2);
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);};
+  
+  
+/* @media screen and (max-width:830px){
+  .container{
+    background-color: transparent;
+
+  } 
+  .content{
+    flex-direction: column;
+  }
+  .aboutImage{
+    display:none
+  }
+  .aboutItem{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+} */

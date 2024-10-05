@@ -1,0 +1,166 @@
+.container{
+    background-color: white;
+    color: black;
+
+}
+.title{
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-left: 100px;
+    border-bottom: 10px solid rgb(238, 98, 11);
+    width: 130px;
+
+}
+
+.content{
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    padding: 20px 20px;
+    flex-direction: column;
+    color: black;
+    margin-left: 100px;
+
+
+}
+.project{
+    display: flex;
+    border-radius: 10px;    
+    padding: 20px 20px;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.leftWraper{
+    max-width: 400px;
+    margin-right: 60px;
+}
+.contain{
+    display: flex;
+    gap: 100px;
+}
+.source{
+    width: 70px;
+    height: 70px;
+    color: red;
+    background-size: cover;
+    background-color: black;
+    border-radius: 50%;
+}
+.live{
+    width: 70px;
+    height:  70px;
+    border-radius: 10px;
+    background-color: hsl(256deg 40% 30%);
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    font-size: 20px;
+    color: white;
+    border-radius: 50%;
+}
+.live:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: #45a049; /* Background color on hover */
+}
+.source:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color:#45a049 ;
+}
+.view {
+    max-width:  170px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px 22px;
+    color: white;
+    background-color: #ed6955;
+    z-index: 10; /* Higher z-index to ensure the button is on top */
+    position: relative; /* Relative positioning to work with absolute child */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+/* Hover effect for .view button */
+.view:hover {
+    transform: translate3d(20px, 20px, 0); /* Move slightly up and left */
+    cursor: pointer;
+}
+
+.project img{
+    width: 100%;
+    max-width:500px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 4px 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 60px;
+}
+
+.project img:hover{
+    transform: scale(1.1);
+    display: block;
+}
+.skill{
+    padding: 10px;
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    color: white;
+    gap:10px
+    
+}
+.skill li{
+    padding: 8px 8px;
+    background: black;
+    margin-bottom: 40px;
+ 
+}
+.box {
+    border: solid black;
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    z-index: 5; /* Lower z-index to appear behind the button */
+    margin-top: -40px;
+    margin-left: 20px;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+
+/* Hover effect that affects .box */
+
+.project h3{
+    font-size:30px;
+    font-weight: 900;
+}
+.project p{
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.link{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.link a {
+    padding: 8px 8px;
+    border-radius: 10px ;
+    background: #576CBC;
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+@media screen and (max-width : 830px){
+    .content{
+        flex-direction: column-reverse;
+    }
+    .content{
+        align-items: center;
+    }
+}

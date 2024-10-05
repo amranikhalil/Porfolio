@@ -1,0 +1,35 @@
+[
+    {
+      "slug":"Project1",
+      "website":"",
+      "title": "Car managment system with price prediction",
+      "imageSrc": "projects/carManagment.png",
+      "description": " Developed a car managment platforme enabling users to buy, sell and manage cars with prediction model.",
+      "skills": ["React", "Express", "NodeJs","Javascript","python"],
+      "demo": "https://www.example.com",
+      "source": "https://github.com/amranikhalil/buy-sell-cars"
+    },
+    {
+      "slug":"Project2",
+      "website":"",
+      "title": "Resilient Failure Prediction System for Autonomous Trains",
+      "imageSrc": "projects/model.png",
+      "description": "Developed an advanced machine learning model to predict failures in automated train systems as part of agraduation thesis (mémoire de thèse).",
+      "skills": ["python", "Kaggle", "machine learning"],
+      "demo": "https://www.example.com",
+      "source": "https://www.kaggle.com/code/khalilia/projet-fin-d-tude/edit"
+    },
+    {
+      "slug":"Project3",
+      "website":"https://blogdevnext.netlify.app/",
+      "title": "blog website",
+      "imageSrc": "projects/blog.png",
+      "description": "A blog website showcasing articles about technologies and programming .",
+      "skills": ["Javascript", "nextJs", "css"],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    }
+ 
+  
+  ]
+  

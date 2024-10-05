@@ -1,0 +1,51 @@
+.container{
+    margin-top: 79px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.title{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.75;
+    margin-left:5% ;
+
+}
+.skills{
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.history{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.historyItems{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    background : #19376d;
+    background: linear-gradient(90deg,#19376d 0%, rgb(25,55,109,0)100%);
+    padding: 24px;
+}
+.historyItem{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
