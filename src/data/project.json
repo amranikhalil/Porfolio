@@ -6,7 +6,7 @@
       "imageSrc": "projects/carManagment.png",
       "description": " Developed a car managment platforme enabling users to buy, sell and manage cars with prediction model.",
       "skills": ["React", "Express", "NodeJs","Javascript","python"],
-      "demo": "https://www.example.com",
+      "detaille": "sdfsdf",
       "source": "https://github.com/amranikhalil/buy-sell-cars"
     },
     {
@@ -16,7 +16,7 @@
       "imageSrc": "projects/model.png",
       "description": "Developed an advanced machine learning model to predict failures in automated train systems as part of agraduation thesis (mémoire de thèse).",
       "skills": ["python", "Kaggle", "machine learning"],
-      "demo": "https://www.example.com",
+      "detaille": "",
       "source": "https://www.kaggle.com/code/khalilia/projet-fin-d-tude/edit"
     },
     {
@@ -26,7 +26,17 @@
       "imageSrc": "projects/blog.png",
       "description": "A blog website showcasing articles about technologies and programming .",
       "skills": ["Javascript", "nextJs", "css"],
-      "demo": "https://www.example.com",
+      "detaille": "",
+      "source": "https://www.github.com"
+    },
+    {
+      "slug":"Project4",
+      "website":"https://khalilchess.netlify.app/",
+      "title": "chess game",
+      "imageSrc": "projects/chess.png",
+      "description": "Developed a fully interactive, web-based chess game using modern web technologies. This project showcases proficiency in front-end development, state management, and interactive UI design .",
+      "skills": ["Javascript", "react", "framer-motion"],
+      "detaille": "",
       "source": "https://www.github.com"
     }
  

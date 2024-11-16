@@ -6,10 +6,10 @@
 .title{
     font-size: 2.25rem;
     font-weight: 900;
-    margin-left: 100px;
+    margin-left: 40px;
     border-bottom: 10px solid rgb(238, 98, 11);
     width: 130px;
-
+    color: black;
 }
 
 .content{
@@ -19,7 +19,7 @@
     padding: 20px 20px;
     flex-direction: column;
     color: black;
-    margin-left: 100px;
+    margin-left: 10px;
 
 
 }
@@ -35,7 +35,7 @@
 }
 .leftWraper{
     max-width: 400px;
-    margin-right: 60px;
+    margin-right: 30px;
 }
 .contain{
     display: flex;
@@ -50,8 +50,9 @@
     border-radius: 50%;
 }
 .live{
-    width: 70px;
+    max-width: 70px;
     height:  70px;
+    padding: 20px,50px;
     border-radius: 10px;
     background-color: hsl(256deg 40% 30%);
     transition: background-color 0.3s ease; /* Smooth background color transition */
@@ -74,7 +75,7 @@
     height: 60px;
     font-weight: 700;
     font-size: 20px;
-    padding: 15px 22px;
+    padding: 10px 15px;
     color: white;
     background-color: #ed6955;
     z-index: 10; /* Higher z-index to ensure the button is on top */
@@ -101,23 +102,26 @@
     display: block;
 }
 .skill{
-    padding: 10px;
+    width: 100%;
+    /* padding: 10px; */
     display: flex;
     list-style: none;
     margin-top: 20px;
     color: white;
-    gap:10px
+    gap:10px;
+    flex-wrap: wrap;
+    
     
 }
 .skill li{
     padding: 8px 8px;
     background: black;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
  
 }
 .box {
     border: solid black;
-    width: 170px;
+    width: 160px;
     height: 60px;
     position: absolute;
     z-index: 5; /* Lower z-index to appear behind the button */
@@ -157,10 +161,22 @@
 }
 
 @media screen and (max-width : 830px){
-    .content{
-        flex-direction: column-reverse;
+   
+    .title{
     }
-    .content{
-        align-items: center;
+    .leftWraper{
+        width: 90%;
     }
+    .box{
+        display: none;
+    }
+    .live{
+        /* padding:20px; */
+        padding: 0px 10px;
+
+    }
+    .contain{
+        gap: 50px;
+    }
+   
 }

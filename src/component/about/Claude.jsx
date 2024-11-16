@@ -50,7 +50,7 @@ export const Cloude = () => {
           <span className={styles.icon}
             onClick={()=>styleIcon}
           > 
-            <img src= {getImageUrl('contact/linkedinIcon.png')}></img>
+            <img src= {getImageUrl('skills/react.png')}></img>
           </span>
         </motion.div>
         <motion.div
@@ -60,7 +60,7 @@ export const Cloude = () => {
           animate="animate"
         >
         <span className={styles.icon}> 
-          <img src= {getImageUrl('contact/emailIcon.png')}></img>
+          <img src= {getImageUrl('skills/node.png')}></img>
         </span>
         </motion.div>
 
@@ -72,7 +72,7 @@ export const Cloude = () => {
           style={{ animationDelay: '5s' }}
         >
          <span className={styles.icon}> 
-          <img src= {getImageUrl('contact/githubIcon.png')}></img>
+          <img src= {getImageUrl('skills/mongodb.png')}></img>
         </span>
         </motion.div>
       </div>

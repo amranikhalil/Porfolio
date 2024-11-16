@@ -7,14 +7,14 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    min-height: 600px;  
+    min-height: 550px;  
 }
 .typed-cursor{
   opacity: 0;
 }
 .title{
     font-size: 2.25rem;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: 1.75px;
     align-self: flex-start;
     border-bottom: 10px solid rgb(238, 98, 11);
@@ -22,12 +22,13 @@
 .leftContainer{
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  padding-left: 30px;
   gap: 40px;
+  width: 100%;
 }
 
 .aboutImage{
-    width: 288px;
+    max-width: 208px;
     height: 350px;
     border-radius: 20px;
 }
@@ -37,13 +38,11 @@
  padding: 10px;
  hyphens: auto;
 
-    
 }
 .content{
   margin-top: 100px;
-  margin-right: 100px;
+  margin-right: 10px;
   
-
 }
 .aboutItems{
     max-width: 600px;
@@ -66,15 +65,6 @@
 .aboutItemText{
     display: flex;
 }
-@media screen and (max-width:830px) {
-  .container{
-    flex-direction: column;
-  }
-  .content{
-    margin-top: 20px;
-    margin-left: 30px;
-  }
-}
 .cloudContainer {
   position: absolute;
   top: 0;
@@ -83,6 +73,26 @@
   height: 100%;
   overflow: hidden;
   /* z-index: 4; */
+}
+@media screen and (max-width : 630px){
+  .leftContainer img{
+    /* width: 150px; */
+    height: 250px;
+}
+  .nepo{
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  .container{
+    flex-wrap: wrap;
+  }
+  .content{
+    margin:0;
+  }
+  .cloud3,.cloud1,.cloud2{
+    display: none;
+  }
+
 }
 
 .cloud1,
@@ -103,7 +113,7 @@
 }
 
 .cloud2 {
-  top: 30%;
+  top: 60%;
   right: 0;
 }
 
@@ -113,28 +123,14 @@
 }
 .icon{
   position: absolute;
-  left: 20px;
-  top: 30px;
+  scale: 0.7;
+  left: 5px;
+  top: 10px;
 }
 .icon:hover{
   transform: scale(1.2);
   border-radius: 50%;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);};
-  
-  
-/* @media screen and (max-width:830px){
-  .container{
-    background-color: transparent;
 
-  } 
-  .content{
-    flex-direction: column;
-  }
-  .aboutImage{
-    display:none
-  }
-  .aboutItem{
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-} */
+
+

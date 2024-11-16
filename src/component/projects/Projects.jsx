@@ -27,12 +27,21 @@ export const Projects = () => {
                             </ul>
                             <div className={styles.contain}>
                                 <div>
-
-                                <button 
-                                onClick={()=>navigate(`/${project.slug}`)}
-                                className={styles.view}>
-                                    view project
-                                </button>
+                                {
+                                    project.detaille!=''?(
+                                        <button 
+                                        onClick={()=>navigate(`/${project.slug}`)}
+                                        className={styles.view}>
+                                            view project
+                                        </button>
+                                    ):(
+                                        <button 
+                                        className={styles.view}>
+                                            view project
+                                        </button>
+                                    )
+                                }
+                              
                                 <div className={styles.box}>  </div>
                                 </div>
                               

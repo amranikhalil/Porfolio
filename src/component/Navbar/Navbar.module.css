@@ -22,6 +22,7 @@
 }
 .menu{
     display: flex;
+    
 }
 .menuItems{
     display: flex;
@@ -37,7 +38,6 @@
     text-decoration: none;
     font-size :24px;
     color: white;
-    border-bottom: 5px solid rgb(238, 98, 11);
 
 }
 
@@ -71,6 +71,6 @@
     }
     .menuOpen{
      display: flex;
-     z-index: 1;
+     z-index: 10;
     }
 }

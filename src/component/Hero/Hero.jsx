@@ -16,7 +16,7 @@ export const Hero = () => {
       showCursor:false
     });
     const typedDescription = new Typed(elDescription.current, {
-      strings: [' I am full stack developper with 3 years experience'],
+      strings: [' I am full stack developper with 2 years experience'],
       typeSpeed: 50,
       startDelay:4000,
       showCursor:false
