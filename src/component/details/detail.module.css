@@ -1,19 +1,21 @@
+@import '../../var.css';
+
 .wraper {
     max-width: 900px;
     margin: 0 auto;
-    padding: 80px 10%;
-    background-color: #fff;
-    color: #121e27;
+    padding: var(--space-9) 10%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 .wraper h1 {
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 24px;
+    margin-bottom: var(--space-5);
     position: relative;
     display: inline-block;
-    padding-bottom: 12px;
+    padding-bottom: var(--space-3);
 }
 
 .wraper h1::after {
@@ -23,52 +25,51 @@
     bottom: 0;
     width: 60px;
     height: 4px;
-    background-color: #ed6955;
+    background-color: var(--color-accent);
     border-radius: 2px;
 }
 
 .wraper h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 16px;
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-4);
 }
 
 .wraper p {
     font-size: 1.0625rem;
-    font-weight: 400;
     line-height: 1.75;
-    color: #3a4654;
-    margin-bottom: 16px;
+    color: var(--color-text-soft);
+    margin-bottom: var(--space-4);
 }
 
 .imageWraper {
-    background-color: #fafafa;
-    padding: 24px;
-    margin: 32px 0;
-    border-radius: 16px;
-    border: 1px solid #e5e7eb;
+    background-color: var(--color-surface);
+    padding: var(--space-5);
+    margin: var(--space-6) 0;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
 }
 
 .images {
     aspect-ratio: 16 / 10;
     width: 100%;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 16px;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-4);
 }
 
 .images img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .carouselControl {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .carouselControl button {
@@ -77,10 +78,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 50%;
-    color: #121e27;
+    color: var(--color-text);
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
@@ -88,9 +89,9 @@
 
 .carouselControl button:hover:not(:disabled) {
     transform: translateY(-2px);
-    background-color: #ed6955;
-    border-color: #ed6955;
-    color: #fff;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-on-accent);
 }
 
 .carouselControl button:disabled {
@@ -99,7 +100,5 @@
 }
 
 @media (max-width: 700px) {
-    .wraper {
-        padding: 60px 6%;
-    }
+    .wraper { padding: var(--space-8) 6%; }
 }

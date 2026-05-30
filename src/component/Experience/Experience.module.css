@@ -1,17 +1,19 @@
+@import '../../var.css';
+
 .container {
-    padding: 80px 10%;
-    background-color: #fff;
-    color: #121e27;
+    padding: var(--space-9) 10%;
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .title {
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 56px;
+    margin-bottom: var(--space-7);
     position: relative;
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: var(--space-3);
 }
 
 .title::after {
@@ -21,7 +23,7 @@
     bottom: 0;
     width: 60px;
     height: 4px;
-    background-color: #ed6955;
+    background-color: var(--color-accent);
     border-radius: 2px;
 }
 
@@ -30,30 +32,28 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #6b7280;
-    margin-bottom: 24px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-5);
 }
 
-.skillsGroup {
-    margin-bottom: 64px;
-}
+.skillsGroup { margin-bottom: var(--space-8); }
 
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 12px;
+    gap: var(--space-3);
     list-style: none;
 }
 
 .skill {
-    --skill-color: #121e27;
+    --skill-color: var(--color-text);
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 16px;
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     cursor: default;
@@ -62,7 +62,7 @@
 .skill:hover {
     transform: translateY(-3px);
     border-color: var(--skill-color);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .skillIcon {
@@ -75,66 +75,55 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: var(--space-6);
 }
 
 .historyItem {
     display: flex;
-    gap: 24px;
-    padding: 24px;
-    background-color: #fafafa;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    gap: var(--space-5);
+    padding: var(--space-5);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
 }
 
 .historyLogo {
     width: 56px;
     height: 56px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     flex-shrink: 0;
 }
 
-.historyBody {
-    flex: 1;
-}
+.historyBody { flex: 1; }
 
 .historyBody h4 {
     font-size: 1.125rem;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: var(--space-1);
 }
 
 .historyBody h4 span {
     font-weight: 400;
-    color: #6b7280;
+    color: var(--color-text-muted);
 }
 
 .historyDate {
     font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
 }
 
 .bullets {
     list-style: disc inside;
-    color: #3a4654;
+    color: var(--color-text-soft);
     line-height: 1.7;
 }
 
-.bullets li {
-    margin-bottom: 4px;
-}
+.bullets li { margin-bottom: var(--space-1); }
 
 @media (max-width: 700px) {
-    .container {
-        padding: 60px 8%;
-    }
-    .skills {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    .historyItem {
-        flex-direction: column;
-        gap: 16px;
-    }
+    .container { padding: var(--space-8) 8%; }
+    .skills { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+    .historyItem { flex-direction: column; gap: var(--space-4); }
 }

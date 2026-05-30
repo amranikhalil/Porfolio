@@ -1,17 +1,19 @@
+@import '../../var.css';
+
 .container {
-    padding: 80px 10%;
-    background-color: #fafafa;
-    color: #121e27;
+    padding: var(--space-9) 10%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 .title {
     font-size: clamp(2rem, 4vw, 2.75rem);
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 56px;
+    margin-bottom: var(--space-7);
     position: relative;
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: var(--space-3);
 }
 
 .title::after {
@@ -21,7 +23,7 @@
     bottom: 0;
     width: 60px;
     height: 4px;
-    background-color: #ed6955;
+    background-color: var(--color-accent);
     border-radius: 2px;
 }
 
@@ -29,14 +31,14 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: var(--space-9);
 }
 
 .project {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     align-items: center;
-    gap: 60px;
+    gap: var(--space-7);
 }
 
 .project:nth-child(even) {
@@ -51,78 +53,78 @@
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    margin-bottom: 12px;
+    margin-bottom: var(--space-3);
 }
 
 .leftWraper p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #3a4654;
-    margin-bottom: 20px;
+    color: var(--color-text-soft);
+    margin-bottom: var(--space-5);
 }
 
 .skill {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 28px;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
 }
 
 .skill li {
-    padding: 6px 12px;
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 999px;
+    padding: var(--space-2) var(--space-3);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
     font-size: 0.875rem;
     font-weight: 500;
-    color: #3a4654;
+    color: var(--color-text-soft);
 }
 
 .contain {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-4);
 }
 
 .view {
     display: inline-flex;
     align-items: center;
-    padding: 12px 24px;
-    background-color: #ed6955;
-    color: #fff;
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
     font-size: 1rem;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .view:hover {
     transform: translateY(-2px);
-    background-color: #d9543f;
-    box-shadow: 0 8px 20px rgba(237, 105, 85, 0.35);
+    background-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-accent);
 }
 
 .live {
     display: inline-flex;
     align-items: center;
-    padding: 12px 24px;
+    padding: var(--space-3) var(--space-6);
     background-color: transparent;
-    color: #ed6955;
+    color: var(--color-accent);
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid #ed6955;
-    border-radius: 8px;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .live:hover {
     transform: translateY(-2px);
-    background-color: #ed6955;
-    color: #fff;
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
 }
 
 .source {
@@ -135,19 +137,19 @@
 
 .source:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .imageWraper {
     aspect-ratio: 16 / 10;
     overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    background-color: var(--color-surface);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: var(--space-3);
 }
 
 .imageWraper img {
@@ -165,13 +167,11 @@
 }
 
 @media (max-width: 850px) {
-    .container {
-        padding: 60px 8%;
-    }
+    .container { padding: var(--space-8) 8%; }
     .project,
     .project:nth-child(even) {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: var(--space-5);
     }
     .project:nth-child(even) .leftWraper {
         order: initial;

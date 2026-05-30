@@ -1,7 +1,100 @@
-:root{
-    --color-text:#fff;
-    --color-primary : #576cbc;
-    --color-secondary : #19376d;
-    --color-dark : #0b2447;
-    --color-bg : #04152d;
+/* ============================================================
+   Design Tokens — two-tier system
+   ============================================================
+   TIER 1 (primitive): raw values, named by what they ARE.
+     - Components NEVER consume these directly.
+     - Adding a new color/spacing? Define it here first.
+   TIER 2 (semantic): named by what they're FOR.
+     - Components consume only these.
+     - Themes (light/dark) re-map semantics to different primitives.
+   ============================================================ */
+
+:root {
+  /* ── TIER 1 — primitive ─────────────────── */
+
+  /* Neutrals */
+  --slate-950: #0a141d;
+  --slate-900: #121e27;
+  --slate-800: #1f2e3a;
+  --slate-700: #2d3e4d;
+  --slate-600: #3a4654;
+  --slate-500: #6b7280;
+  --slate-400: #9ca3af;
+  --slate-300: #c8c8d0;
+  --slate-200: #e5e7eb;
+  --slate-100: #f3f4f6;
+  --slate-50: #fafafa;
+  --white: #ffffff;
+
+  /* Brand — accent */
+  --orange-700: #c14935;
+  --orange-600: #d9543f;
+  --orange-500: #ed6955;
+  --orange-400: #f08775;
+
+  /* Sizing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* ── TIER 2 — semantic (LIGHT is default base) ───────── */
+  /* These can be re-mapped per theme below. */
+
+  --color-bg: var(--slate-50);
+  --color-surface: var(--white);
+  --color-surface-alt: var(--slate-100);
+  --color-text: var(--slate-900);
+  --color-text-muted: var(--slate-500);
+  --color-text-soft: var(--slate-600);
+  --color-border: var(--slate-200);
+
+  --color-accent: var(--orange-500);
+  --color-accent-hover: var(--orange-600);
+  --color-on-accent: var(--white);
+
+  /* Inverse — for sections that contrast (hero, contact) */
+  --color-bg-inverse: var(--slate-900);
+  --color-surface-inverse: var(--slate-800);
+  --color-text-inverse: var(--white);
+  --color-text-muted-inverse: var(--slate-300);
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --shadow-accent: 0 8px 20px rgba(237, 105, 85, 0.35);
+}
+
+/* ── Dark theme override ──────────────────────────────── */
+
+[data-theme='dark'] {
+  --color-bg: var(--slate-950);
+  --color-surface: var(--slate-900);
+  --color-surface-alt: var(--slate-800);
+  --color-text: var(--white);
+  --color-text-muted: var(--slate-400);
+  --color-text-soft: var(--slate-300);
+  --color-border: var(--slate-700);
+
+  /* Accent stays the same — brand color is theme-independent */
+
+  /* Inverse becomes light for dark mode */
+  --color-bg-inverse: var(--white);
+  --color-surface-inverse: var(--slate-50);
+  --color-text-inverse: var(--slate-900);
+  --color-text-muted-inverse: var(--slate-600);
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.40);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.50);
 }

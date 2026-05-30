@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
 import styles from './Navbar.module.css'
 
 const NAV_LINKS = [
@@ -40,6 +41,9 @@ export const Navbar = () => {
             <a href={href}>{label}</a>
           </li>
         ))}
+        <li>
+          <ThemeToggle />
+        </li>
       </ul>
     </nav>
   )
