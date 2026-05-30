@@ -6,6 +6,10 @@ import { Detail } from './component/details/Detail'
 function App() {
   return (
     <div className={styles.App}>
+      <a href="#main" className={styles.skipLink}>
+        Skip to main content
+      </a>
+
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/:slug" element={<Detail />} />

@@ -21,7 +21,7 @@ export const Projects = () => {
                 ))}
               </ul>
               <div className={styles.contain}>
-                {project.detaille && (
+                {project.detail && (
                   <button
                     onClick={() => navigate(`/${project.slug}`)}
                     className={styles.view}
@@ -59,6 +59,8 @@ export const Projects = () => {
               <img
                 src={getImageUrl(project.imageSrc)}
                 alt={`${project.title} screenshot`}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </li>

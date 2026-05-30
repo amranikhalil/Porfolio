@@ -9,11 +9,13 @@ export const Portfolio = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About1 />
-      <Experience />
-      <Projects />
-      <Contact />
+      <main id="main">
+        <Hero />
+        <About1 />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
     </>
   )
 }

@@ -52,6 +52,9 @@ export const Hero = () => {
         className={styles.heroImg}
         src={getImageUrl('hero/02.jpg')}
         alt="Khalil Amrani"
+        width="320"
+        height="400"
+        loading="eager"
       />
     </section>
   )

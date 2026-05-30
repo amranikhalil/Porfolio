@@ -13,23 +13,25 @@ export const Detail = () => {
   const project = projects.find((p) => p.slug === slug)
   const [imageIndex, setImageIndex] = useState(0)
 
-  if (!project || typeof project.detaille !== 'object') {
+  if (!project || !project.detail) {
     return (
       <>
         <Navbar />
-        <div className={styles.wraper}>
-          <h1>Project not found</h1>
-          <p>
-            The project you&apos;re looking for doesn&apos;t have a detail page yet.{' '}
-            <Link to="/">Back home</Link>
-          </p>
-        </div>
-        <Contact />
+        <main id="main">
+          <div className={styles.wraper}>
+            <h1>Project not found</h1>
+            <p>
+              The project you&apos;re looking for doesn&apos;t have a detail
+              page yet. <Link to="/">Back home</Link>.
+            </p>
+          </div>
+          <Contact />
+        </main>
       </>
     )
   }
 
-  const { title, intro, purpose, images } = project.detaille
+  const { title, intro, purpose, images } = project.detail
 
   const swapRight = () =>
     setImageIndex((i) => Math.min(i + 1, images.length - 1))
@@ -38,49 +40,51 @@ export const Detail = () => {
   return (
     <>
       <Navbar />
-      <div className={styles.wraper}>
-        <h1>{title}</h1>
-        <p>{intro}</p>
+      <main id="main">
+        <article className={styles.wraper}>
+          <h1>{title}</h1>
+          <p>{intro}</p>
 
-        <div className={styles.imageWraper}>
-          <div className={styles.images}>
-            <AnimatePresence initial={false}>
-              {images.slice(imageIndex, imageIndex + 1).map((image) => (
-                <motion.img
-                  key={image}
-                  src={getImageUrl(`projects/${image}`)}
-                  alt={`${title} screenshot ${imageIndex + 1} of ${images.length}`}
-                  initial={{ opacity: 0, x: 200 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -200 }}
-                  transition={{ duration: 0.5 }}
-                />
-              ))}
-            </AnimatePresence>
+          <div className={styles.imageWraper}>
+            <div className={styles.images}>
+              <AnimatePresence initial={false}>
+                {images.slice(imageIndex, imageIndex + 1).map((image) => (
+                  <motion.img
+                    key={image}
+                    src={getImageUrl(`projects/${image}`)}
+                    alt={`${title} screenshot ${imageIndex + 1} of ${images.length}`}
+                    initial={{ opacity: 0, x: 200 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -200 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+
+            <div className={styles.carouselControl}>
+              <button
+                onClick={swapLeft}
+                disabled={imageIndex === 0}
+                aria-label="Previous image"
+              >
+                <GoChevronLeft />
+              </button>
+              <button
+                onClick={swapRight}
+                disabled={imageIndex >= images.length - 1}
+                aria-label="Next image"
+              >
+                <GoChevronRight />
+              </button>
+            </div>
           </div>
 
-          <div className={styles.carouselControl}>
-            <button
-              onClick={swapLeft}
-              disabled={imageIndex === 0}
-              aria-label="Previous image"
-            >
-              <GoChevronLeft style={{ color: 'black', fontSize: '40px' }} />
-            </button>
-            <button
-              onClick={swapRight}
-              disabled={imageIndex >= images.length - 1}
-              aria-label="Next image"
-            >
-              <GoChevronRight style={{ color: 'black', fontSize: '40px' }} />
-            </button>
-          </div>
-        </div>
-
-        <h2>Project purpose and goal</h2>
-        <p>{purpose}</p>
-      </div>
-      <Contact />
+          <h2>Project purpose and goal</h2>
+          <p>{purpose}</p>
+        </article>
+        <Contact />
+      </main>
     </>
   )
 }
