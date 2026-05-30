@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "role": "Freelance Web Developer",
+    "organisation": "Self-employed",
+    "startDate": "May 2025",
+    "endDate": "Present",
+    "experiences": [
+      "Building responsive web applications for independent clients across multiple stacks.",
+      "Owning each engagement end-to-end: requirements, architecture, implementation, deployment."
+    ]
+  },
+  {
+    "role": "Web Developer",
+    "organisation": "Bignova",
+    "startDate": "Nov 2024",
+    "endDate": "Apr 2025",
+    "experiences": [
+      "Developed a sports-management web platform serving teams, coaches, and players.",
+      "Designed modules for performance tracking, match analysis, and training management.",
+      "Implemented a modern React + Redux architecture for predictable state and a smooth user experience."
+    ]
+  }
+]

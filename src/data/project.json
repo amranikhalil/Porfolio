@@ -17,12 +17,29 @@
   {
     "slug": "Project2",
     "title": "Resilient Failure Prediction System for Autonomous Trains",
-    "description": "Developed an advanced machine learning model to predict failures in automated train systems as part of a graduation thesis.",
+    "description": "Master's thesis: ML system to predict failures in autonomous train systems, achieving 99.95% precision on a 15M-instance public benchmark.",
     "imageSrc": "projects/model.png",
-    "skills": ["Python", "Kaggle", "Machine learning"],
+    "skills": ["Python", "XGBoost", "SHAP", "Machine Learning", "Kaggle"],
     "website": "",
     "source": "https://www.kaggle.com/code/khalilia/projet-fin-d-tude/edit",
-    "detail": null
+    "detail": {
+      "title": "Proactive Failure Prediction in Train Air Production Units",
+      "intro": "Master's thesis at the University of Bejaia in collaboration with LIGM, ESIEE Paris. The project tackles predictive maintenance in autonomous railway systems — predicting failures in air production units before they happen, using gradient-boosted trees on a large public sensor benchmark.",
+      "purpose": "Unplanned downtime in autonomous trains is expensive and unsafe. The goal was a model that could see failures coming days in advance and explain *why*, so maintenance teams could act with confidence instead of reacting to alarms. I trained an XGBoost model on the MetroPT-3 dataset (15M+ sensor instances from Metro Porto), then layered SHAP explainability on top to surface failure precursors up to three days before incidents. The system outperformed LSTM, Random Forest, and Sparse AutoEncoder baselines, reaching 99.95% precision. The work was accepted for publication.",
+      "images": ["model.png"],
+      "metrics": [
+        { "value": "99.95%", "label": "Precision" },
+        { "value": "15M+", "label": "Training instances" },
+        { "value": "3 days", "label": "Failure prediction window" }
+      ],
+      "publication": {
+        "title": "Proactive Failure Prediction in Train Air Production Units Using XGBoost",
+        "authors": "L. Yahiaoui, A. Aggoune, K. Amrani, M. Mohammedi, K. Hamouid",
+        "venue": "University of Bejaia & LIGM, ESIEE Paris",
+        "year": 2025,
+        "url": "https://ieeexplore.ieee.org/document/11059524"
+      }
+    }
   },
   {
     "slug": "Project3",
