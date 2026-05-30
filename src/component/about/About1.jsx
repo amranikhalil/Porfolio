@@ -1,40 +1,54 @@
-import { getImageUrl } from '../../util'
+import { HiAcademicCap, HiCode, HiBriefcase } from 'react-icons/hi'
 import styles from './about.module.css'
+
+const HIGHLIGHTS = [
+  {
+    Icon: HiAcademicCap,
+    title: 'Education',
+    body: "Master's in Computer Science",
+  },
+  {
+    Icon: HiCode,
+    title: 'Focus',
+    body: 'Web development & machine learning',
+  },
+  {
+    Icon: HiBriefcase,
+    title: 'Looking for',
+    body: 'Software engineering roles',
+  },
+]
 
 export const About1 = () => {
   return (
     <section className={styles.container} id="about">
-      <section className={styles.leftContainer}>
-        <h1 className={styles.title}>My Skills</h1>
-        <img
-          className={styles.aboutImage}
-          src={getImageUrl('hero/02.jpg')}
-          alt="Khalil Amrani"
-        />
-      </section>
+      <div className={styles.inner}>
+        <h2 className={styles.title}>About me</h2>
 
-      <section className={styles.content}>
-        <ul className={styles.aboutItems}>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Next.js</li>
-          <li>MongoDB</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Java</li>
-          <li>Oracle</li>
-          <li>Python</li>
-        </ul>
-        <p className={styles.nepo}>
+        <p className={styles.bio}>
           Master&apos;s graduate in computer science, driven by a deep passion
-          for web development and machine learning. Skilled in creating
-          responsive, intuitive web applications and seamlessly integrating
-          machine learning models to elevate user experiences. Eager to apply
-          my expertise and innovative mindset in a dynamic role, where I can
-          contribute to cutting-edge projects and drive impactful results.
+          for web development and machine learning. I build responsive,
+          intuitive web applications and integrate ML models to elevate user
+          experience.
         </p>
-      </section>
+        <p className={styles.bio}>
+          I&apos;m looking for a dynamic role where I can contribute to
+          cutting-edge projects, grow alongside experienced engineers, and ship
+          products that make an impact.
+        </p>
+
+        <ul className={styles.highlights}>
+          {HIGHLIGHTS.map(({ Icon, title, body }) => (
+            <li key={title} className={styles.highlight}>
+              <Icon className={styles.highlightIcon} />
+              <div>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

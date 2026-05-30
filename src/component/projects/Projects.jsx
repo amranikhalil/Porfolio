@@ -8,7 +8,7 @@ export const Projects = () => {
 
   return (
     <section className={styles.container} id="project">
-      <h2 className={styles.title}>Project</h2>
+      <h2 className={styles.title}>Projects</h2>
       <ul className={styles.content}>
         {projects.map((project) => (
           <li className={styles.project} key={project.slug}>
@@ -22,15 +22,12 @@ export const Projects = () => {
               </ul>
               <div className={styles.contain}>
                 {project.detaille && (
-                  <div>
-                    <button
-                      onClick={() => navigate(`/${project.slug}`)}
-                      className={styles.view}
-                    >
-                      view project
-                    </button>
-                    <div className={styles.box}></div>
-                  </div>
+                  <button
+                    onClick={() => navigate(`/${project.slug}`)}
+                    className={styles.view}
+                  >
+                    View project
+                  </button>
                 )}
 
                 {project.website ? (

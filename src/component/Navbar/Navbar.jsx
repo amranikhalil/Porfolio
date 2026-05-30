@@ -1,37 +1,46 @@
-import react, { useState } from "react";
+import { useState } from 'react'
+import { HiMenu, HiX } from 'react-icons/hi'
+import styles from './Navbar.module.css'
 
-import  {getImageUrl} from '../../util';
-import styles from  "./Navbar.module.css"
-import { useNavigate } from "react-router-dom";
+const NAV_LINKS = [
+  { href: '/#about', label: 'About' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#project', label: 'Projects' },
+  { href: '/#contact', label: 'Contact' },
+]
 
 export const Navbar = () => {
-    const [menuOpen, setMenuOpen ]=useState(false)
-    const navigate= useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const closeMenu = () => setMenuOpen(false)
+
   return (
-    <nav className={styles.nav} >
-        <a className={styles.title} href="/">Portfolio</a>
-        <div className={styles.menu} >
-            <img className={styles.menubtn} 
-                src={
-                    menuOpen?
-                    getImageUrl('nav/closeIcon.png'):
-                    getImageUrl('nav/menuIcon.png')
-                    }
-                onClick={()=>setMenuOpen(!menuOpen)
-                }
-            />
-            <ul onClick={()=>setMenuOpen(false)} className={`${styles.menuItems} ${menuOpen && styles.menuOpen  }`}>
-                <li>
-                    <a href="#about">about</a>
-                </li>
-                <li>
-                    <a href="#project">projects</a>
-                </li>
-                <li>
-                    <a href="#contact">contact</a>
-                </li>
-            </ul>
-        </div>
+    <nav className={styles.nav}>
+      <a className={styles.title} href="/" onClick={closeMenu}>
+        Khalil
+      </a>
+
+      <button
+        type="button"
+        className={styles.menubtn}
+        onClick={() => setMenuOpen((open) => !open)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+        aria-controls="primary-nav"
+      >
+        {menuOpen ? <HiX /> : <HiMenu />}
+      </button>
+
+      <ul
+        id="primary-nav"
+        onClick={closeMenu}
+        className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ''}`}
+      >
+        {NAV_LINKS.map(({ href, label }) => (
+          <li key={href}>
+            <a href={href}>{label}</a>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

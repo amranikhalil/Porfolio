@@ -4,38 +4,55 @@ import { getImageUrl } from '../../util'
 import styles from './Hero.module.css'
 
 export const Hero = () => {
-  const elTitle = useRef()
-  const elDescription = useRef()
- 
-  useEffect(() => {
-    const typedTitle = new Typed(elTitle.current, {
-      strings: ['Hi I\'m KHALIL, I am software engineer '],
-      typeSpeed: 50,
-      backSpeed: 40,
-      showCursor:false
-    });
-    const typedDescription = new Typed(elDescription.current, {
-      strings: [' specialised in web development'],
-      typeSpeed: 50,
-      startDelay:4000,
-      showCursor:false
-    });
+  const elDescription = useRef(null)
 
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typedTitle.destroy();
-      typedDescription.destroy()
-    };
-  }, []);
+  useEffect(() => {
+    const typed = new Typed(elDescription.current, {
+      strings: [
+        'I build web applications.',
+        'I work with machine learning.',
+        'I ship products end-to-end.',
+      ],
+      typeSpeed: 45,
+      backSpeed: 25,
+      backDelay: 1800,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    })
+
+    return () => typed.destroy()
+  }, [])
 
   return (
-    <section className= {styles.container} id='hero'>
-        <div className={styles.content}>
-            <h2 className={styles.title} ref={elTitle}>   </h2>
-            <p className={styles.description } ref={elDescription}>  </p>
-            {/* <a  className={styles.contact}href='khalilamrani715@gmail.com'> contact me</a> */}
+    <section className={styles.container} id="hero">
+      <div className={styles.content}>
+        <p className={styles.greeting}>Hi, I&apos;m</p>
+        <h1 className={styles.title}>Khalil Amrani.</h1>
+        <h2 className={styles.subtitle}>
+          Software engineer — <span ref={elDescription}></span>
+        </h2>
+        <p className={styles.lede}>
+          Master&apos;s graduate in computer science, building responsive web
+          apps and integrating machine learning models to elevate user
+          experience.
+        </p>
+
+        <div className={styles.actions}>
+          <a href="#contact" className={styles.primary}>
+            Get in touch
+          </a>
+          <a href="#project" className={styles.secondary}>
+            View projects →
+          </a>
         </div>
-        {/* <img className={styles.heroImg} src={getImageUrl('hero/02.jpg')}/> */}
+      </div>
+
+      <img
+        className={styles.heroImg}
+        src={getImageUrl('hero/02.jpg')}
+        alt="Khalil Amrani"
+      />
     </section>
   )
 }
