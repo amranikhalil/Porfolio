@@ -12,7 +12,7 @@ export const Contact = () => {
         <div className= {styles.Contact}>
         <ul className= {styles.contact}>
             <li>
-            <a href='https://github.com/amranikhalil'
+            <a href='mailto:khalilamrani715@gmail.com'
                 style={{
                     backgroundImage: `url(${getImageUrl('contact/emailIcon.png')})`,
                 

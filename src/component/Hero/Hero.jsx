@@ -1,8 +1,7 @@
-import {useEffect,useRef} from 'react'
+import { useEffect, useRef } from 'react'
+import Typed from 'typed.js'
 import { getImageUrl } from '../../util'
 import styles from './Hero.module.css'
-import Typed from 'typed.js'
-import { Cloude } from '../about/Claude'
 
 export const Hero = () => {
   const elTitle = useRef()

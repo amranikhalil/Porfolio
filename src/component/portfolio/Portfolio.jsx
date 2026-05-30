@@ -1,20 +1,21 @@
-import React from 'react'
-import { Navbar } from "../Navbar/Navbar"
-import { Hero } from "../Hero/Hero"
-import  {About1} from "../about/About1"
-import { Projects } from "../projects/Projects"
-import { Contact } from "../contact/Contact"
-import { Cloude } from "../about/Claude"
-import {Routes, Route} from 'react-router-dom'
+import { Navbar } from '../Navbar/Navbar'
+import { Hero } from '../Hero/Hero'
+import { About1 } from '../about/About1'
+import { Experience } from '../Experience/Experience'
+import { Projects } from '../projects/Projects'
+import { Contact } from '../contact/Contact'
+import { Cloud } from '../about/Claude'
+
 export const Portfolio = () => {
   return (
     <>
-      <Cloude/>
-      <Navbar/>
-      <Hero/>
-      <About1/>
-      <Projects/>
-      <Contact/>   
+      <Cloud />
+      <Navbar />
+      <Hero />
+      <About1 />
+      <Experience />
+      <Projects />
+      <Contact />
     </>
   )
 }
