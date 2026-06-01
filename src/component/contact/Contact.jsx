@@ -1,21 +1,21 @@
-import { getImageUrl } from '../../util'
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import styles from './Contact.module.css'
 
 const CONTACT_LINKS = [
   {
     href: 'mailto:khalilamrani715@gmail.com',
     label: 'Email Khalil',
-    icon: 'contact/emailIcon.png',
+    Icon: FaEnvelope,
   },
   {
     href: 'https://github.com/amranikhalil',
     label: 'GitHub profile',
-    icon: 'contact/githubIcon.png',
+    Icon: FaGithub,
   },
   {
     href: 'https://www.linkedin.com/in/khalil-amrani-b19010228/',
     label: 'LinkedIn profile',
-    icon: 'contact/linkedinIcon.png',
+    Icon: FaLinkedin,
   },
 ]
 
@@ -30,7 +30,7 @@ export const Contact = () => {
       </div>
 
       <ul className={styles.contact}>
-        {CONTACT_LINKS.map(({ href, label, icon }) => (
+        {CONTACT_LINKS.map(({ href, label, Icon }) => (
           <li key={href}>
             <a
               href={href}
@@ -39,8 +39,9 @@ export const Contact = () => {
                 target: '_blank',
                 rel: 'noopener noreferrer',
               })}
-              style={{ backgroundImage: `url(${getImageUrl(icon)})` }}
-            />
+            >
+              <Icon aria-hidden="true" />
+            </a>
           </li>
         ))}
       </ul>

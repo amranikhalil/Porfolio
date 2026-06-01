@@ -1,21 +1,27 @@
 [
-  {
+    {
     "slug": "Project1",
-    "title": "Car management system with price prediction",
-    "description": "Developed a car management platform enabling users to buy, sell, and manage cars with a price-prediction model.",
-    "imageSrc": "projects/carManagment.png",
-    "skills": ["React", "Express", "Node.js", "JavaScript", "Python"],
-    "website": "",
-    "source": "https://github.com/amranikhalil/buy-sell-cars",
-    "detail": {
-      "title": "Car management system with price prediction",
-      "intro": "A comprehensive car management system that allows users to buy, sell, and manage their cars efficiently. The platform includes a price-prediction model that helps users determine the optimal price for their vehicles based on factors such as make, model, year, mileage, and market trends.",
-      "purpose": "Designed to streamline the car listing and selling process, offering a predictive pricing feature based on historical data. The aim was to let users confidently price their cars or evaluate potential purchases. The challenge was integrating a machine learning model seamlessly into a web application while ensuring the system was scalable and user-friendly. A reliable backend manages user data, car listings, and the ML model. As the system handles a growing amount of car data, scalability and performance were key concerns throughout development.",
-      "images": ["carManagment.png", "cars.png", "ManageAccount.png", "manageCars.png"]
-    }
+    "title": "Airsline — Car rental platform in Algeria",
+    "description": "Built a car rental web application allowing users to browse, book, and rent vehicles across Algeria, with a clean booking interface and management features.",
+    "imageSrc": "projects/car.png",
+    "skills": [ "React", "Tailwind CSS","Express", "PostgreSQL", "Prisma", "Railway", "Vercel"],
+    "website": "https://car-rental-5y11.vercel.app/"
   },
   {
     "slug": "Project2",
+    "title": "AI-powered Home Diagnosis Web Application",
+    "description": "Built an AI-driven platform capable of interpreting room and home images, diagnosing potential issues, and generating enhanced visual solutions through LLM and diffusion-based models.",
+    "imageSrc": "freelance/homePage.png",
+    "skills": ["Next.js", "supabase", "Node.js", "shadcn/ui", "openai", "Python"],
+    "detail": {
+      "title": "AI-powered Home Diagnosis Web Application",
+      "intro": "An AI-driven platform capable of interpreting room and home images, diagnosing potential issues, and generating enhanced visual solutions through LLM and diffusion-based models.",
+      "purpose": "Designed to provide users with a comprehensive home diagnosis solution, leveraging AI to identify potential issues and offer actionable insights. The challenge was integrating advanced AI models seamlessly into a web application while ensuring the system was scalable and user-friendly. A reliable backend manages user data, image processing, and the AI model. As the system handles a growing amount of home images, scalability and performance were key concerns throughout development.",
+      "images": ["freelance/analyse.png", "freelance/analyseResult.png", "freelance/recomandation.png", "freelance/improvedImage.png"]
+    }
+  },
+  {
+    "slug": "Project3",
     "title": "Resilient Failure Prediction System for Autonomous Trains",
     "description": "Master's thesis: ML system to predict failures in autonomous train systems, achieving 99.95% precision on a 15M-instance public benchmark.",
     "imageSrc": "projects/model.png",
@@ -26,7 +32,7 @@
       "title": "Proactive Failure Prediction in Train Air Production Units",
       "intro": "Master's thesis at the University of Bejaia in collaboration with LIGM, ESIEE Paris. The project tackles predictive maintenance in autonomous railway systems — predicting failures in air production units before they happen, using gradient-boosted trees on a large public sensor benchmark.",
       "purpose": "Unplanned downtime in autonomous trains is expensive and unsafe. The goal was a model that could see failures coming days in advance and explain *why*, so maintenance teams could act with confidence instead of reacting to alarms. I trained an XGBoost model on the MetroPT-3 dataset (15M+ sensor instances from Metro Porto), then layered SHAP explainability on top to surface failure precursors up to three days before incidents. The system outperformed LSTM, Random Forest, and Sparse AutoEncoder baselines, reaching 99.95% precision. The work was accepted for publication.",
-      "images": ["model.png"],
+      "images": ["projects/model.png"],
       "metrics": [
         { "value": "99.95%", "label": "Precision" },
         { "value": "15M+", "label": "Training instances" },
@@ -42,7 +48,17 @@
     }
   },
   {
-    "slug": "Project3",
+    "slug": "Project4",
+    "title": "jewelry e-commerce website",
+    "description": "An e-commerce platform for selling jewelry online.",
+    "imageSrc": "projects/jewelry.png",
+    "skills": ["JavaScript", "React", "tailwindcss","supabase","Express","Ant design"],
+    "website": "https://ladernieretouche.store/",
+    "source": "https://www.github.com",
+    "detail": null
+  },
+  {
+    "slug": "Project5",
     "title": "Blog website",
     "description": "A blog website showcasing articles about technologies and programming.",
     "imageSrc": "projects/blog.png",
@@ -51,8 +67,9 @@
     "source": "https://www.github.com",
     "detail": null
   },
+  
   {
-    "slug": "Project4",
+    "slug": "Project6",
     "title": "Chess game",
     "description": "A fully interactive, web-based chess game using modern web technologies. Showcases proficiency in front-end development, state management, and interactive UI design.",
     "imageSrc": "projects/chess.png",
@@ -60,5 +77,20 @@
     "website": "https://khalilchess.netlify.app/",
     "source": "https://www.github.com",
     "detail": null
+  },
+  {
+    "slug": "Project7",
+    "title": "Car management system with price prediction",
+    "description": "Developed a car management platform enabling users to buy, sell, and manage cars with a price-prediction model.",
+    "imageSrc": "projects/carManagment.png",
+    "skills": ["React", "Express", "Node.js", "JavaScript", "Python"],
+    "website": "",
+    "source": "https://github.com/amranikhalil/buy-sell-cars",
+    "detail": {
+      "title": "Car management system with price prediction",
+      "intro": "A comprehensive car management system that allows users to buy, sell, and manage their cars efficiently. The platform includes a price-prediction model that helps users determine the optimal price for their vehicles based on factors such as make, model, year, mileage, and market trends.",
+      "purpose": "Designed to streamline the car listing and selling process, offering a predictive pricing feature based on historical data. The aim was to let users confidently price their cars or evaluate potential purchases. The challenge was integrating a machine learning model seamlessly into a web application while ensuring the system was scalable and user-friendly. A reliable backend manages user data, car listings, and the ML model. As the system handles a growing amount of car data, scalability and performance were key concerns throughout development.",
+      "images": ["projects/carManagment.png", "projects/cars.png", "projects/ManageAccount.png", "projects/manageCars.png"]
+    }
   }
 ]

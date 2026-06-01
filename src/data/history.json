@@ -16,7 +16,6 @@
     "endDate": "Apr 2025",
     "experiences": [
       "Developed a sports-management web platform serving teams, coaches, and players.",
-      "Designed modules for performance tracking, match analysis, and training management.",
       "Implemented a modern React + Redux architecture for predictable state and a smooth user experience."
     ]
   }

@@ -2,6 +2,7 @@ import projects from '../../data/project.json'
 import { getImageUrl } from '../../util'
 import styles from './Project.module.css'
 import { useNavigate } from 'react-router-dom'
+import { FaGithub } from 'react-icons/fa'
 
 export const Projects = () => {
   const navigate = useNavigate()
@@ -44,13 +45,9 @@ export const Projects = () => {
                     rel="noopener noreferrer"
                     aria-label={`${project.title} source on GitHub`}
                     className={styles.source}
-                    style={{
-                      backgroundImage: `url(${getImageUrl('contact/githubIcon.png')})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
-                  />
+                  >
+                    <FaGithub aria-hidden="true" />
+                  </a>
                 )}
               </div>
             </div>

@@ -64,7 +64,7 @@ export const Detail = () => {
                   {images.slice(imageIndex, imageIndex + 1).map((image) => (
                     <motion.img
                       key={image}
-                      src={getImageUrl(`projects/${image}`)}
+                      src={getImageUrl(image)}
                       alt={`${title} screenshot ${imageIndex + 1} of ${images.length}`}
                       initial={{ opacity: 0, x: 200 }}
                       animate={{ opacity: 1, x: 0 }}
